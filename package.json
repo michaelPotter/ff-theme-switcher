@@ -1,0 +1,23 @@
+{
+  "name": "theme-switcher",
+  "version": "1.0.0",
+  "description": "Simple utility to switch between light and dark themes",
+  "private": true,
+  "dependencies": {
+    "react": "*",
+    "react-dom": "*"
+  },
+  "devDependencies": {
+    "@babel/core": "*",
+    "@babel/preset-env": "*",
+    "@babel/preset-react": "*",
+    "babel-loader": "*",
+    "eslint": "*",
+    "eslint-loader": "*",
+    "eslint-plugin-only-warn": "*",
+    "eslint-plugin-react": "*",
+    "jsx-loader": "*",
+    "webpack": "*",
+    "webpack-cli": "*"
+  }
+}
