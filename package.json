@@ -1,5 +1,5 @@
 {
-  "name": "theme-switcher",
+  "name": "ff-theme-switcher",
   "version": "1.0.0",
   "description": "Simple utility to switch between light and dark themes",
   "private": true,
