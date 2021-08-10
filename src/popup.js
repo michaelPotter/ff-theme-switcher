@@ -6,11 +6,41 @@ import {render} from "react-dom";
 import theme_dark from './theme_dark';
 import theme_light from './theme_light';
 
-function light() { browser.theme.update(theme_light) }
-function dark() { browser.theme.update(theme_dark) }
+let browserThemes = {
+    light: theme_light,
+    dark: theme_dark,
+};
+
+
+function setTheme(theme) {
+    browser.theme.update(browserThemes[theme]);
+    setDDGTheme(theme);
+    window.close();
+}
+
+let light = () => setTheme("light")
+let dark = () => setTheme("dark")
+
+function setDDGTheme(theme) {
+    if (theme == "dark") {
+        browser.cookies.set({
+            name: "ae",
+            value: "d",
+            url: "https://duckduckgo.com/",
+            sameSite: "lax",
+            secure: true,
+        });
+    } else if (theme == "light") {
+        browser.cookies.remove({
+            name: "ae",
+            url: "https://duckduckgo.com/",
+        });
+    }
+}
 
 function MainContent(props) {
 
+    // // CODE TO PRINT CURRENT THEME
     // useEffect(async () => {
     //     let t = await browser.theme.getCurrent()
     //     console.log(JSON.stringify(t, null, 2))

@@ -1,6 +1,7 @@
 # Theme Switcher
 
-My personal theme switcher. Easily switch between light and dark themes
+My personal theme switcher. Easily switch between light and dark themes. Sets the browser chrome and duckduckgo.com
+themes.
 
 ## Building
 Run `make release` to build the extension, `./switcher.zip`

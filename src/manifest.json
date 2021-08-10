@@ -3,7 +3,7 @@
 
 	"name": "Theme Switcher",
 	"description": "Simple utility to switch between light and dark themes",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"icons": {
 		"48": "icon.png",
 		"96": "icon.png",
@@ -16,6 +16,8 @@
 	},
 
 	"permissions": [
+		"*://duckduckgo.com/*",
+		"cookies",
 		"theme"
 	]
 }
