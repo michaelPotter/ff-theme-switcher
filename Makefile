@@ -10,11 +10,13 @@ release: $(zip)
 debug: debug.zip
 
 $(zip): $(src_files) dist
-	cp icons/icon.png dist/icon.png # FIX icon
+	cp icons/icon_white.png dist/icon_dark.png
+	cp icons/icon_black.png dist/icon_light.png
 	cd dist && zip -r ../$(zip) .
 
 debug.zip: $(src_files) dist
-	cp icons/icon_debug.png dist/icon.png
+	cp icons/icon_debug_green.png dist/icon_dark.png
+	cp icons/icon_debug_pink.png dist/icon_light.png
 	cd dist && zip -r ../debug.zip .
 
 dist: webpack

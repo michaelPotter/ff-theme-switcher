@@ -11,10 +11,16 @@ let browserThemes = {
     dark: theme_dark,
 };
 
+let icons = {
+    light: "icon_light.png",
+    dark: "icon_dark.png",
+}
+
 
 function setTheme(theme) {
     browser.theme.update(browserThemes[theme]);
     setDDGTheme(theme);
+    browser.browserAction.setIcon({path: icons[theme]});
     window.close();
 }
 
