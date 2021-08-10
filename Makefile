@@ -9,6 +9,10 @@ release: $(zip)
 
 debug: debug.zip
 
+# For making the source zip that needs to be uploaded for version submit
+source_zip: clean
+	./scripts/make_source_zip.sh
+
 $(zip): $(src_files) dist
 	cp icons/icon_white.png dist/icon_dark.png
 	cp icons/icon_black.png dist/icon_light.png
